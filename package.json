@@ -1,0 +1,20 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "A backend for the website of Limor Sadot",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "author": "DinSan",
+  "license": "ISC",
+  "dependencies": {
+    "@emailjs/browser": "^3.6.2",
+    "aws-sdk": "^2.1133.0",
+    "body-parser": "^1.20.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1"
+  }
+}
