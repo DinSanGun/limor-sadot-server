@@ -12,6 +12,6 @@ app.get('/testing',(req,res) => {
     res.send("Hey it's working!")
 })
 
-app.listen(process.env.PORT || 8080, () => {
+app.listen(443, () => {
     console.log('Server is running!')
 })
