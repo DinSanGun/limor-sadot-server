@@ -16,11 +16,11 @@ app.use(cors());
 app.use(router);
 const port = 443;
 
-app.use('/', (req,res,next) => {
+app.get('/', (req,res) => {
     res.send('Hello from SSL Server!')
 })
 
-app.use('/testing',(req,res) => {
+app.get('/testing',(req,res) => {
     res.send("Hey it's working!")
 })
 
