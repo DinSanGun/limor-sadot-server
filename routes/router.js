@@ -4,7 +4,7 @@ import dotenv from 'dotenv'
 dotenv.config()
 
 const router = express.Router();
-aws.config.update({accessKeyId: process.env.AWS_ACCESS_KEY_ID, secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY})
+aws.config.update({accessKeyId: AWS_ACCESS_KEY_ID, secretAccessKey: AWS_SECRET_ACCESS_KEY})
 const ses = new aws.SES({region: 'us-east-1'});
 
 router.post('/email', async (req,res) => {
