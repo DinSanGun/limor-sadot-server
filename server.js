@@ -20,7 +20,7 @@ app.use('/', (req,res,next) => {
     res.send('Hello from SSL Server!')
 })
 
-app.get('/testing',(req,res) => {
+app.use('/testing',(req,res) => {
     res.send("Hey it's working!")
 })
 
