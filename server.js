@@ -14,7 +14,7 @@ app.use('/', express.static("public"));
 app.use(express.json());
 app.use(cors());
 app.use(router);
-const port = 8080;
+const port = 443;
 
 app.use('/', (req,res,next) => {
     res.send('Hello from SSL Server!')
@@ -29,8 +29,8 @@ const sslServer = https.createServer({
     cert: fs.readFileSync(path.join(dirname, 'cert', 'cert.pem'))
 }, app)
 
-sslServer.listen(3443, () => {
-    console.log('Secure server is up on port 3443.')
+sslServer.listen(port, () => {
+    console.log('Secure server is up on port 443.')
 })
 
 // app.listen(port, () => {
