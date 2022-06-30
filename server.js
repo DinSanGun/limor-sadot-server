@@ -10,11 +10,11 @@ const __filename = fileURLToPath(import.meta.url);
 const dirname = path.dirname(__filename);
 
 const app = express();
+
+app.use(cors());
+
 app.use('/', express.static("public"));
 app.use(express.json());
-app.use(cors({
-    origin: '*'
-}));
 app.use(router);
 const port = 443;
 // const validationFilePath = '/.well-known/pki-validation/5B5B1A2F9211E2759DD26D5E97AA1C04.txt'
