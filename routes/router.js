@@ -1,13 +1,14 @@
 import express from 'express'
 import aws from 'aws-sdk'
 import dotenv from 'dotenv'
+import cors from 'cors'
 dotenv.config()
 
 const router = express.Router();
 aws.config.update({accessKeyId: process.env.AWS_ACCESS_KEY_ID, secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY})
 const ses = new aws.SES({region: 'us-east-1'});
 
-router.post('/email', async (req,res) => {
+router.post('/email', cors(), async (req,res) => {
     console.log(req.body)
     const {name: senderName, subject, email, message} = req.body;
 
