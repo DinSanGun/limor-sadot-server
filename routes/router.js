@@ -20,14 +20,6 @@ router.post('/email', cors(), async (req,res) => {
         console.log(error)
         res.status(400).send('ERROR')
     }
-
-
-    // sesMail(senderName, subject, email, message).then((val) => {
-    //     console.log('Got: ', val)
-    //     res.send('success!')
-    // }).catch((err) => {
-    //     res.send('/error' + err)
-    // })
 });
 
 function sesMail(senderName, subject, email, message) {
